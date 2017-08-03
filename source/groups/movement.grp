@@ -1,0 +1,5 @@
+#name : def_func : def_bind : secondary_action : invnext : invprev
+forward     :   +forward    :   w
+back        :   +back       :   s
+moveleft    :   +moveleft   :   a
+moveright   :   +moveright  :   d

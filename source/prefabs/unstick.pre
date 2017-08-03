@@ -1,0 +1,24 @@
+////////////////////////////////////////////////////////////////////
+// Reset sticking keys
+////////////////////////////////////////////////////////////////////
+-forward
+-back
+-moveleft
+-moveright
+-attack
+-attack2
+-attack3
+-jump
+-duck
+-crouch
+-moveup
+-movedown
+-lookup
+-lookdown 
+-voicerecord
+-taunt
+-use_action_slot_item
+-inspect
+-reload
+-showscores
+-showroundinfo

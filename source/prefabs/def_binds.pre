@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////////////////
+// Default binds
+////////////////////////////////////////////////////////////////////
+
+//Here are some binds that cannot be substituted with aliases
+bind f1 lastinv; //this one is used only to close taunt menu
+bind g +taunt; //taunt menu uses custom rebind, therefore i could not substitute the functionality with alises
+
+//notification interaction aliases
+bind    = 	cl_trigger_first_notification
+bind 	- 	cl_decline_first_notification
+bind y say
+bind u say_team
+
+//keypad binds for ease of used
+bind KP_END 		KP_1
+bind KP_DOWNARROW 	KP_2
+bind KP_PGDN  		KP_3
+bind KP_LEFTARROW 	KP_4
+bind KP_5 		    KP_5
+bind KP_RIGHTARROW 	KP_6
+bind KP_HOME 		KP_7
+bind KP_UPARROW 	KP_8
+bind KP_PGUP 		KP_9
+
+//Automatically generated binds below

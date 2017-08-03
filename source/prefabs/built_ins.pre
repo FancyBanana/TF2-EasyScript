@@ -1,0 +1,16 @@
+//Built in scripts are going here
+//the famous null-canceling movement script
+
+alias +u_forward "-fd_back;+fd_forward;alias checkfwd +fd_forward"
+alias +u_back "-fd_forward;+fd_back;alias checkback +fd_back"
+alias +u_moveleft "-fd_moveright;+fd_moveleft;alias checkleft +fd_moveleft"
+alias +u_moveright "-fd_moveleft;+fd_moveright;alias checkright +fd_moveright"
+alias -u_forward "-fd_forward;checkback;alias checkfwd none"
+alias -u_back "-fd_back;checkfwd;alias checkback none"
+alias -u_moveleft "-fd_moveleft;checkright;alias checkleft none"
+alias -u_moveright "-fd_moveright;checkleft;alias checkright none"
+alias checkfwd none
+alias checkback none
+alias checkleft none
+alias checkright none
+alias none ""

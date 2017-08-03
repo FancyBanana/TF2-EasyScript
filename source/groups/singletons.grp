@@ -1,0 +1,27 @@
+#name : def_func : def_bind : secondary_action : invnext : invprev
+#this cannot be grouped toghether, therefore they dont have a callback
+callmed                 :   voicemenu 0 0               :   e
+voicerecord             :   +voicerecord                :   v
+voicemenu_1             :   voice_menu_1                :   z
+voicemenu_2             :   voice_menu_2                :   x
+voicemenu_3             :   voice_menu_3                :   c
+changeclass             :   changeclass                 :   ,
+changeteam              :   changeteam                  :   .
+loadout                 :   open_charinfo_direct        :   m
+backpack                :   open_charinfo_backpack      :   n
+dropitem                :   dropitem                    :   l
+action_slot             :   +use_action_slot_item       :   h
+showmapinfo             :   showmapinfo                 :   i 
+inspect                 :   +inspect                    :   f
+lastdisguise            :   lastdisguise                :   b 
+reload                  :   +reload; +attack3           :   r   
+spray_logo              :   impulse 201                 :   t
+showscores              :   +showscores                 :   tab
+quest_log               :   show_quest_log              :   f2
+askconnect              :   askconnect_accept           :   f3
+ready_toggle            :   player_ready_toggle         :   f4
+screenshot              :   screenshot                  :   f5
+save_replay             :   save_replay                 :   f6
+abuse_report            :   abuse_report_queue          :   f7
+quit_game               :   quit prompt                 :   f10
+replay_tips             :   replay_togglereplaytips     :   f12

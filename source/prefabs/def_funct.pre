@@ -1,0 +1,92 @@
+////////////////////////////////////////////////////////////////////
+// Default functions
+////////////////////////////////////////////////////////////////////
+
+//These are useful aliases that people might want to use
+//Communication commands
+//shamelessly stolen from /u/Tvde1
+alias v_medic "voicemenu 0 0"
+alias v_thanks "voicemenu 0 1"
+alias v_gogogo "voicemenu 0 2"
+alias v_moveup "voicemenu 0 3"
+alias v_goleft "voicemenu 0 4"
+alias v_goright "voicemenu 0 5"
+alias v_yes "voicemenu 0 6"
+alias v_no "voicemenu 0 7"
+
+alias v_incoming        "voicemenu 1 0"
+alias v_cloakedspy      "voicemenu 1 1"
+alias v_sentryahead     "voicemenu 1 2"
+alias v_teleporterhere  "voicemenu 1 3"
+alias v_dispenserhere   "voicemenu 1 4"
+alias v_sentryhere      "voicemenu 1 5"
+alias v_activateuber    "voicemenu 1 6"
+alias v_uberready       "voicemenu 1 7"
+
+alias v_help        "voicemenu 2 0"
+alias v_battlecry   "voicemenu 2 1"
+alias v_cheers      "voicemenu 2 2"
+alias v_jeers       "voicemenu 2 3"
+alias v_positive    "voicemenu 2 4"
+alias v_negative    "voicemenu 2 5"
+alias v_niceshot    "voicemenu 2 6"
+alias v_goodjob     "voicemenu 2 7"
+
+//Engi build menus
+alias   b_dispenser "build 0 0"
+alias   b_tele_in   "build 1 0"
+alias   b_tele_out  "build 1 1"
+alias   b_sentry    "build 2 0"
+alias   b_sapper    "build 3 0" //Spy can build sappers, WTF
+
+alias   d_dispenser "destroy  0 0"
+alias   d_tele_in   "destroy  1 0"
+alias   d_tele_out  "destroy  1 1"
+alias   d_sentry    "destroy  2 0"
+//no sapper destrying, :(
+
+//Engi eurika teleport
+alias   etp_spawn   "eureka_teleport 0"
+alias   etp_tpexit  "eureka_teleport 1"
+
+//fast class join
+
+alias c_scout     join_class scout
+alias c_soldier   join_class soldier
+alias c_pyro      join_class pyro
+alias c_demoman   join_class demoman
+alias c_heavy     join_class heavyweapons
+alias c_engineer  join_class engineer
+alias c_medic     join_class medic
+alias c_sniper    join_class sniper
+alias c_spy       join_class spy
+
+//spy fast disguise
+//enemy classes
+alias dg_e_scout    "disguise 1 -1"
+alias dg_e_sniper   "disguise 2 -1"
+alias dg_e_soldier  "disguise 3 -1"
+alias dg_e_demoman  "disguise 4 -1"
+alias dg_e_medic    "disguise 5 -1"
+alias dg_e_heavy    "disguise 6 -1"
+alias dg_e_pyro     "disguise 7 -1"
+alias dg_e_spy      "disguise 8 -1"
+alias dg_e_engineer "disguise 9 -1"
+//friendly classes
+alias dg_f_scout    "disguise 1 -2"
+alias dg_f_sniper   "disguise 2 -2"
+alias dg_f_soldier  "disguise 3 -2"
+alias dg_f_demoman  "disguise 4 -2"
+alias dg_f_medic    "disguise 5 -2"
+alias dg_f_heavy    "disguise 6 -2"
+alias dg_f_pyro     "disguise 7 -2"
+alias dg_f_spy      "disguise 8 -2"
+alias dg_f_engineer "disguise 9 -2"
+
+//show text on hud, stolen from /u/Tvde1
+alias showonscreen "developer 1; clear; d_separator; wait 10; message; wait 10; d_separator; con_filter_enable 1; contimes 6; con_notifytime 10; wait 440; developer 0; con_notifytime 8 ; contimes 8; con_filter_enable 0"
+con_filter_text_out     " "
+alias d_separator       "echo [------------------------------------------------------------]"
+alias message           "echo No message..."
+
+//automaticly generated aliases

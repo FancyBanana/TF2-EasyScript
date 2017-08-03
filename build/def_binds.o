@@ -1,0 +1,82 @@
+bind MOUSE1 +u_attack
+bind MOUSE2 +u_attack2
+bind MOUSE3 +u_attack3
+ 
+//bind <key> +u_ctx1
+//bind <key> +u_ctx2
+//bind <key> +u_ctx3
+//bind <key> +u_ctx4
+//bind <key> +u_ctx5
+//bind <key> +u_ctx6
+//bind <key> +u_ctx7
+//bind <key> +u_ctx8
+ 
+//bind <key> +u_misc1
+//bind <key> +u_misc2
+//bind <key> +u_misc3
+//bind <key> +u_misc4
+//bind <key> +u_misc5
+//bind <key> +u_misc6
+//bind <key> +u_misc7
+//bind <key> +u_misc8
+ 
+bind w +u_forward
+bind s +u_back
+bind a +u_moveleft
+bind d +u_moveright
+ 
+bind space +u_jump
+bind ctrl +u_duck
+ 
+bind e +u_callmed
+bind v +u_voicerecord
+bind z +u_voicemenu_1
+bind x +u_voicemenu_2
+bind c +u_voicemenu_3
+bind , +u_changeclass
+bind . +u_changeteam
+bind m +u_loadout
+bind n +u_backpack
+bind l +u_dropitem
+bind h +u_action_slot
+bind i +u_showmapinfo
+bind f +u_inspect
+bind b +u_lastdisguise
+bind r +u_reload
+bind t +u_spray_logo
+bind tab +u_showscores
+bind f2 +u_quest_log
+bind f3 +u_askconnect
+bind f4 +u_ready_toggle
+bind f5 +u_screenshot
+bind f6 +u_save_replay
+bind f7 +u_abuse_report
+bind f10 +u_quit_game
+bind f12 +u_replay_tips
+ 
+bind 1 +u_slot1
+bind 2 +u_slot2
+bind 3 +u_slot3
+bind 4 +u_slot4
+bind 5 +u_slot5
+bind 6 +u_slot6
+bind q +u_lastinv
+bind mwheelup +u_invnext
+bind mwheeldown +u_invprev
+ 
+//bind <key> +u_taunt
+bind k +u_taunt_def
+//bind <key> +u_taunt1
+//bind <key> +u_taunt2
+//bind <key> +u_taunt3
+//bind <key> +u_taunt4
+//bind <key> +u_taunt5
+//bind <key> +u_taunt6
+//bind <key> +u_taunt7
+//bind <key> +u_taunt8
+ 
+//bind <key> +u_mod_pa
+//bind <key> +u_mod_pb
+//bind <key> +u_mod_ta
+//bind <key> +u_mod_tb
+ 

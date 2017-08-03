@@ -1,0 +1,12 @@
+#name : def_func : def_bind : secondary_action : invnext : invprev
+#since taunt menu uses custom binds not available to scripters, i had to make some workarounds 
+taunt                   :   +taunt                      :       #this one brings up the menu
+taunt_def               :   taunt                       :   k   #this one uses default taunt
+taunt1                  :   taunt 1  #these are used to bypass taunt menu
+taunt2                  :   taunt 2
+taunt3                  :   taunt 3
+taunt4                  :   taunt 4
+taunt5                  :   taunt 5
+taunt6                  :   taunt 6
+taunt7                  :   taunt 7
+taunt8                  :   taunt 8

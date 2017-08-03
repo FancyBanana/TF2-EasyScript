@@ -1,0 +1,4 @@
+#name : def_func : def_bind : secondary_action : invnext : invprev
+attack  :   +attack     :   MOUSE1  :   spec_next
+attack2 :   +attack2    :   MOUSE2  :   spec_prev
+attack3 :   +attack3    :   MOUSE3

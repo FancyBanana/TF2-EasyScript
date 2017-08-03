@@ -1,0 +1,84 @@
+ 
+////////////////////////////////////////////////////////////////
+///// taunt
+//////////////////////////////// ////////////////////////////////
+alias +fe_taunt +se_taunt
+alias -fe_taunt -se_taunt
+alias fa_taunt sa_taunt
+alias +u_taunt +fd_taunt
+alias -u_taunt -fd_taunt
+ 
+alias +fe_taunt_def +se_taunt_def
+alias -fe_taunt_def -se_taunt_def
+alias fa_taunt_def sa_taunt_def
+alias +u_taunt_def +fd_taunt_def
+alias -u_taunt_def -fd_taunt_def
+ 
+alias +fe_taunt1 +se_taunt1
+alias -fe_taunt1 -se_taunt1
+alias fa_taunt1 sa_taunt1
+alias +u_taunt1 +fd_taunt1
+alias -u_taunt1 -fd_taunt1
+ 
+alias +fe_taunt2 +se_taunt2
+alias -fe_taunt2 -se_taunt2
+alias fa_taunt2 sa_taunt2
+alias +u_taunt2 +fd_taunt2
+alias -u_taunt2 -fd_taunt2
+ 
+alias +fe_taunt3 +se_taunt3
+alias -fe_taunt3 -se_taunt3
+alias fa_taunt3 sa_taunt3
+alias +u_taunt3 +fd_taunt3
+alias -u_taunt3 -fd_taunt3
+ 
+alias +fe_taunt4 +se_taunt4
+alias -fe_taunt4 -se_taunt4
+alias fa_taunt4 sa_taunt4
+alias +u_taunt4 +fd_taunt4
+alias -u_taunt4 -fd_taunt4
+ 
+alias +fe_taunt5 +se_taunt5
+alias -fe_taunt5 -se_taunt5
+alias fa_taunt5 sa_taunt5
+alias +u_taunt5 +fd_taunt5
+alias -u_taunt5 -fd_taunt5
+ 
+alias +fe_taunt6 +se_taunt6
+alias -fe_taunt6 -se_taunt6
+alias fa_taunt6 sa_taunt6
+alias +u_taunt6 +fd_taunt6
+alias -u_taunt6 -fd_taunt6
+ 
+alias +fe_taunt7 +se_taunt7
+alias -fe_taunt7 -se_taunt7
+alias fa_taunt7 sa_taunt7
+alias +u_taunt7 +fd_taunt7
+alias -u_taunt7 -fd_taunt7
+ 
+alias +fe_taunt8 +se_taunt8
+alias -fe_taunt8 -se_taunt8
+alias fa_taunt8 sa_taunt8
+alias +u_taunt8 +fd_taunt8
+alias -u_taunt8 -fd_taunt8
+ 
+alias +fd_taunt "+fe_taunt; fa_taunt "
+alias -fd_taunt "-fe_taunt; " 
+alias +fd_taunt_def "+fe_taunt_def; fa_taunt_def "
+alias -fd_taunt_def "-fe_taunt_def; " 
+alias +fd_taunt1 "+fe_taunt1; fa_taunt1 "
+alias -fd_taunt1 "-fe_taunt1; " 
+alias +fd_taunt2 "+fe_taunt2; fa_taunt2 "
+alias -fd_taunt2 "-fe_taunt2; " 
+alias +fd_taunt3 "+fe_taunt3; fa_taunt3 "
+alias -fd_taunt3 "-fe_taunt3; " 
+alias +fd_taunt4 "+fe_taunt4; fa_taunt4 "
+alias -fd_taunt4 "-fe_taunt4; " 
+alias +fd_taunt5 "+fe_taunt5; fa_taunt5 "
+alias -fd_taunt5 "-fe_taunt5; " 
+alias +fd_taunt6 "+fe_taunt6; fa_taunt6 "
+alias -fd_taunt6 "-fe_taunt6; " 
+alias +fd_taunt7 "+fe_taunt7; fa_taunt7 "
+alias -fd_taunt7 "-fe_taunt7; " 
+alias +fd_taunt8 "+fe_taunt8; fa_taunt8 "
+alias -fd_taunt8 "-fe_taunt8; " 

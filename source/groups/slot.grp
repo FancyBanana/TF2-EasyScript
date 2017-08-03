@@ -1,0 +1,10 @@
+#name : def_func : def_bind : secondary_action : invnext : invprev
+slot1   :   slot1   :   1   : :  slot2   :   slot3
+slot2   :   slot2   :   2   : :  slot3   :   slot1
+slot3   :   slot3   :   3   : :  slot1   :   slot2
+slot4   :   slot4   :   4   : :  slot1   :   slot3
+slot5   :   slot5   :   5   : :  slot1   :   slot3
+slot6   :   slot6   :   6   : :  slot1   :   slot3
+lastinv : : q
+invnext : : mwheelup 
+invprev : : mwheeldown

@@ -1,0 +1,94 @@
+ 
+////////////////////////////////////////////////////////////////
+///// slot
+//////////////////////////////// ////////////////////////////////
+alias +fe_slot1 +se_slot1
+alias -fe_slot1 -se_slot1
+alias fa_slot1 sa_slot1
+alias fc_slot1 sc_slot1
+alias +u_slot1 +fd_slot1
+alias -u_slot1 -fd_slot1
+ 
+alias +fe_slot2 +se_slot2
+alias -fe_slot2 -se_slot2
+alias fa_slot2 sa_slot2
+alias fc_slot2 sc_slot2
+alias +u_slot2 +fd_slot2
+alias -u_slot2 -fd_slot2
+ 
+alias +fe_slot3 +se_slot3
+alias -fe_slot3 -se_slot3
+alias fa_slot3 sa_slot3
+alias fc_slot3 sc_slot3
+alias +u_slot3 +fd_slot3
+alias -u_slot3 -fd_slot3
+ 
+alias +fe_slot4 +se_slot4
+alias -fe_slot4 -se_slot4
+alias fa_slot4 sa_slot4
+alias fc_slot4 sc_slot4
+alias +u_slot4 +fd_slot4
+alias -u_slot4 -fd_slot4
+ 
+alias +fe_slot5 +se_slot5
+alias -fe_slot5 -se_slot5
+alias fa_slot5 sa_slot5
+alias fc_slot5 sc_slot5
+alias +u_slot5 +fd_slot5
+alias -u_slot5 -fd_slot5
+ 
+alias +fe_slot6 +se_slot6
+alias -fe_slot6 -se_slot6
+alias fa_slot6 sa_slot6
+alias fc_slot6 sc_slot6
+alias +u_slot6 +fd_slot6
+alias -u_slot6 -fd_slot6
+ 
+alias +fe_lastinv +se_lastinv
+alias -fe_lastinv -se_lastinv
+alias fa_lastinv sa_lastinv
+alias fc_lastinv sc_lastinv
+alias +u_lastinv +fd_lastinv
+alias -u_lastinv -fd_lastinv
+ 
+alias +fe_invnext +se_invnext
+alias -fe_invnext -se_invnext
+alias fa_invnext sa_invnext
+alias fc_invnext sc_invnext
+alias +u_invnext +fd_invnext
+alias -u_invnext -fd_invnext
+ 
+alias +fe_invprev +se_invprev
+alias -fe_invprev -se_invprev
+alias fa_invprev sa_invprev
+alias fc_invprev sc_invprev
+alias +u_invprev +fd_invprev
+alias -u_invprev -fd_invprev
+ 
+alias +gn_slot +fd_slot2
+alias -gn_slot -fd_slot2
+ 
+alias fl_slot1 " alias +gl_slot +fd_slot1;  alias -gl_slot -fd_slot1;  alias +gn_slot+fd_slot2;  alias -gn_slot-fd_slot2;  alias +gp_slot+fd_slot3;  alias -gp_slot-fd_slot3;"
+alias fl_slot2 " alias +gl_slot +fd_slot2;  alias -gl_slot -fd_slot2;  alias +gn_slot+fd_slot3;  alias -gn_slot-fd_slot3;  alias +gp_slot+fd_slot1;  alias -gp_slot-fd_slot1;"
+alias fl_slot3 " alias +gl_slot +fd_slot3;  alias -gl_slot -fd_slot3;  alias +gn_slot+fd_slot1;  alias -gn_slot-fd_slot1;  alias +gp_slot+fd_slot2;  alias -gp_slot-fd_slot2;"
+alias fl_slot4 " alias +gl_slot +fd_slot4;  alias -gl_slot -fd_slot4;  alias +gn_slot+fd_slot1;  alias -gn_slot-fd_slot1;  alias +gp_slot+fd_slot3;  alias -gp_slot-fd_slot3;"
+alias fl_slot5 " alias +gl_slot +fd_slot5;  alias -gl_slot -fd_slot5;  alias +gn_slot+fd_slot1;  alias -gn_slot-fd_slot1;  alias +gp_slot+fd_slot3;  alias -gp_slot-fd_slot3;"
+alias fl_slot6 " alias +gl_slot +fd_slot6;  alias -gl_slot -fd_slot6;  alias +gn_slot+fd_slot1;  alias -gn_slot-fd_slot1;  alias +gp_slot+fd_slot3;  alias -gp_slot-fd_slot3;"
+alias +fd_slot1 "gc_slot; alias gc_slot fc_slot1; gl_slot; alias gl_slot fl_slot1; +fe_slot1; fa_slot1 "
+alias -fd_slot1 "-fe_slot1; " 
+alias +fd_slot2 "gc_slot; alias gc_slot fc_slot2; gl_slot; alias gl_slot fl_slot2; +fe_slot2; fa_slot2 "
+alias -fd_slot2 "-fe_slot2; " 
+alias +fd_slot3 "gc_slot; alias gc_slot fc_slot3; gl_slot; alias gl_slot fl_slot3; +fe_slot3; fa_slot3 "
+alias -fd_slot3 "-fe_slot3; " 
+alias +fd_slot4 "gc_slot; alias gc_slot fc_slot4; gl_slot; alias gl_slot fl_slot4; +fe_slot4; fa_slot4 "
+alias -fd_slot4 "-fe_slot4; " 
+alias +fd_slot5 "gc_slot; alias gc_slot fc_slot5; gl_slot; alias gl_slot fl_slot5; +fe_slot5; fa_slot5 "
+alias -fd_slot5 "-fe_slot5; " 
+alias +fd_slot6 "gc_slot; alias gc_slot fc_slot6; gl_slot; alias gl_slot fl_slot6; +fe_slot6; fa_slot6 "
+alias -fd_slot6 "-fe_slot6; " 
+alias +fd_lastinv "+gl_slot; +fe_lastinv; fa_lastinv "
+alias -fd_lastinv "-gl_slot; -fe_lastinv; " 
+alias +fd_invnext "+gn_slot; +fe_invnext; fa_invnext "
+alias -fd_invnext "-gn_slot; -fe_invnext; " 
+alias +fd_invprev "+gp_slot; +fe_invprev; fa_invprev "
+alias -fd_invprev "-gp_slot; -fe_invprev; " 
