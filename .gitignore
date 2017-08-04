@@ -6,3 +6,4 @@ build/*.o
 build/**/
 buid/**/*.o
 wiki/
+output/TF2-EasyScript.zip

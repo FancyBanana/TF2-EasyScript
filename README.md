@@ -68,7 +68,7 @@ It also should be noted that when a function or an alias with `+` prefix is boun
         bind w +forward
 
         pressing w down -> +forward is called
-        releasing 2     -> -forward is called
+        releasing w     -> -forward is called
 
 TF2-EasyScript consists of 4 files, but everything usefull in conviently located in `easyscript.cfg`, other 3 ae purely technical.  
 
@@ -140,7 +140,7 @@ another example
 
 what you write
 
-        bindE +u_callmed
+        bind E +u_callmed
         alais sa_callmed v_medic (v_medic is one of many 
                                   short-hand aliases in TF2-EasyScript)
 
