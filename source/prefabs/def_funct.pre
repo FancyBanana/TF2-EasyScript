@@ -53,8 +53,8 @@ alias   etp_tpexit  "eureka_teleport 1"
 
 alias join_red jointeam red
 alias join_blu jointeam blue
-alias join_spec jointeam auto
-alias join_auto jointeam spectator
+alias join_auto jointeam auto
+alias join_spec jointeam spectator
 
 //fast class join
 

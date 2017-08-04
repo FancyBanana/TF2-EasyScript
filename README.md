@@ -185,7 +185,7 @@ And for the last topic:
 
 It's rather hard for me to describe what a callback is, so I will base my explanation on an example.
 
-Let's say you play spy, your `fov_desired` is `90` by default but you want it to switch to `75` for your ambassador. So you need to switch to `75` when choosing `slot1`, and and back to `90` when choosing anything else. The problem starts with *anything else* part. Normally you would need to include `fov_desired 90` into slots 2 to 10 to set fov to normal, but with TF2-EasyScript you need to do it only once for `slot1` callback, `sc_slot1`.
+Let's say you play spy, your `fov_desired` is `90` by default but you want it to switch to `75` for your ambassador. So you need to switch to `75` when choosing `slot1`, and back to `90` when choosing anything else. The problem starts with *anything else* part. Normally you would need to include `fov_desired 90` into slots 2 to 10 to set fov to normal, but with TF2-EasyScript you need to do it only once for `slot1` callback, `sc_slot1`.
 
 Assuming you are using default binds (`bind 1 +u_slot`,etc...)  
 We need to locate the default function for `+u_slot1`, which should be a combination of any of 4 script aliases. In this case it's 
