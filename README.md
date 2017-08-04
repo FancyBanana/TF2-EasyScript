@@ -146,7 +146,7 @@ what you write
 
 and what happens when you press key
 
-        pressing E -> 1. +se_callmed (nothing)
+        pressing  E-> 1. +se_callmed (nothing)
                       2. sa_callmed (v_medic)
 
         releasing E-> 1. -se_callmed (nothing)
