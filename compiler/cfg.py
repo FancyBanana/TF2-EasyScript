@@ -8,7 +8,7 @@ class CFG:
     build = './build/'                           # directory to store temp files
     out_dir = './output/'                        # final output directory
     # file to store base definitions in
-    oFramework = out_dir+'/framework.cfg'
+    oFramework = out_dir+'/easyscript.cfg'
     # file to store reset commands in
     # usefull when reapplying framework
     oResets = out_dir+'/resets.cfg'
@@ -16,3 +16,5 @@ class CFG:
     oGroups = out_dir+'/groups.cfg'
     # file to store modifiers' definitions in
     oModifiers = out_dir+'/modifiers.cfg'
+    # if set to yes, will disable callback when pressing the same key several times
+    preventCallbackSpam = False

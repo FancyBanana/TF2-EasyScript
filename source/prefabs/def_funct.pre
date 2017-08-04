@@ -49,6 +49,13 @@ alias   d_sentry    "destroy  2 0"
 alias   etp_spawn   "eureka_teleport 0"
 alias   etp_tpexit  "eureka_teleport 1"
 
+//fast team join 
+
+alias join_red jointeam red
+alias join_blu jointeam blue
+alias join_spec jointeam auto
+alias join_auto jointeam spectator
+
 //fast class join
 
 alias c_scout     join_class scout

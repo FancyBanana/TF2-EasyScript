@@ -144,10 +144,10 @@ def compileGroup(group_name, group_data, options):
             fl_funct = 'alias ' + pre['fl'] + ' "'\
                 + ' alias ' + gpre['pgl'] + ' ' + pre['pfd'] + '; ' \
                 + ' alias ' + gpre['mgl'] + ' ' + pre['mfd'] + '; ' \
-                + ' alias ' + gpre['pgn'] + lpre['pin'] + '; ' \
-                + ' alias ' + gpre['mgn'] + lpre['min'] + '; ' \
-                + ' alias ' + gpre['pgp'] + lpre['pip'] + '; ' \
-                + ' alias ' + gpre['mgp'] + lpre['mip'] + ';"'
+                + ' alias ' + gpre['pgn'] + ' ' + lpre['pin'] + '; ' \
+                + ' alias ' + gpre['mgn'] + ' ' + lpre['min'] + '; ' \
+                + ' alias ' + gpre['pgp'] + ' ' + lpre['pip'] + '; ' \
+                + ' alias ' + gpre['mgp'] + ' ' + lpre['mip'] + ';"'
             init2 += [fl_funct]
 
         # defaul script aliases for framework vars
@@ -162,8 +162,12 @@ def compileGroup(group_name, group_data, options):
 
         # Default button press alias
         palias = 'alias ' + pre['pfd'] + ' "'
+        if CFG.preventCallbackSpam:
+            palias += "alias %s none; " % pre['fc']
         if options['callback'] and not is_qswitch_element:
             palias += gpre['gc'] + '; '
+        if CFG.preventCallbackSpam:
+            palias += "alias %s %s; " % (pre['fc'], pre['sc'])
         if options['lastinv'] == entry['name']:
             palias += gpre['pgl'] + '; '
         if options['invnext'] == entry['name']:
@@ -175,7 +179,7 @@ def compileGroup(group_name, group_data, options):
         if options['qswitch'] and not is_qswitch_element:
             palias += gpre['gl'] + '; alias ' + \
              gpre['gl'] + ' ' + pre['fl'] + '; '
-        palias += pre['pfe'] + '; ' + pre['fa'] + ' '
+        palias += pre['pfe'] + '; ' + pre['fa'] + '; '
         if(entry['secondary']):
             palias += entry['secondary'] + ''
         palias += '"'

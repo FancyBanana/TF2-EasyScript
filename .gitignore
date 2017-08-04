@@ -1,0 +1,8 @@
+.vscode/
+build/
+build/*
+build**
+build/*.o
+build/**/
+buid/**/*.o
+wiki/

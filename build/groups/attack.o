@@ -23,9 +23,9 @@ alias fc_attack3 sc_attack3
 alias +u_attack3 +fd_attack3
 alias -u_attack3 -fd_attack3
  
-alias +fd_attack "gc_attack; alias gc_attack fc_attack; +fe_attack; fa_attack spec_next"
+alias +fd_attack "gc_attack; alias gc_attack fc_attack; +fe_attack; fa_attack; spec_next"
 alias -fd_attack "-fe_attack; " 
-alias +fd_attack2 "gc_attack; alias gc_attack fc_attack2; +fe_attack2; fa_attack2 spec_prev"
+alias +fd_attack2 "gc_attack; alias gc_attack fc_attack2; +fe_attack2; fa_attack2; spec_prev"
 alias -fd_attack2 "-fe_attack2; " 
-alias +fd_attack3 "gc_attack; alias gc_attack fc_attack3; +fe_attack3; fa_attack3 "
+alias +fd_attack3 "gc_attack; alias gc_attack fc_attack3; +fe_attack3; fa_attack3; "
 alias -fd_attack3 "-fe_attack3; " 

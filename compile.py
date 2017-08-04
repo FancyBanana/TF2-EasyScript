@@ -93,7 +93,7 @@ l_modifiers = [
 ]
 
 
-# build framework.cfg
+# build easyscript.cfg
 stitchFiles(l_framework, CFG.oFramework)
 
 # build resets

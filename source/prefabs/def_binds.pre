@@ -9,10 +9,12 @@ bind g +taunt; //taunt menu uses custom rebind, therefore i could not substitute
 //notification interaction aliases
 bind    = 	cl_trigger_first_notification
 bind 	- 	cl_decline_first_notification
+
+//chat 
 bind y say
 bind u say_team
 
-//keypad binds for ease of used
+//keypad binds for ease of use
 bind KP_END 		KP_1
 bind KP_DOWNARROW 	KP_2
 bind KP_PGDN  		KP_3
