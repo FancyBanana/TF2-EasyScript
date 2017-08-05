@@ -2,12 +2,11 @@
 
 ## Very soon:
 
-* Modifier keys
-* Making alias for every in-game action
+ * Wiki 
+   * Modifying source
+   * Building from source
 
 ## Not so soon
 
-* Proper description and programming guide
-
-
-## Rewriting in python
+* Wiki
+  * In-depth tutorial

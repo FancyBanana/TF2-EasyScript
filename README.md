@@ -39,7 +39,7 @@ and grab a `.zip` with latest release of TF2-EasyScript
 1. Navigate to your TF2 cfg folder.  
     -  Example: `C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\cfg`
 
-1. Copy the contents of `/output/*` into TF2 cfg folder  
+1. Copy the contents of the archive into TF2 cfg folder  
 
 1. If you hadn't already, create `autoexec.cfg`. This file will be executed  
         at every launch.  
@@ -105,7 +105,7 @@ Here's a bit more detailed:
          sa_<function_name>  //key press event alias
         -se_<function_name>  //keyup event alias
 
-   that are used to call alias in user scripts. Please notice that all these are the same function name with different prefixes.
+   that are used to call alias in user scripts. Please notice that all these are the same aliases name with different prefixes.
 
 Here are couple of simple examples with key press events detailed:
 
