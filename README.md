@@ -154,7 +154,7 @@ and what happens when you press key
 Pretty simple, right? How about something more complex:
 ### Mod shifting `E` to call for Uber
 
-Here we will be using predefined `pa` (full name is `mod_pa`) modified.  
+Here we will be using predefined `pa` (full name is `mod_pa`) modifier.  
 There are 2 types of modifiers: `press` and `toggle`.  
 `a` is a `press` modifier (**p**a), first by alphabetical order (**a**). There are a total of 4 predefined modifiers:  
  * (`mod_`)`pa`
@@ -178,7 +178,7 @@ assuming the last example we need to write
                         for a voice command can be found in
                         `easyscript.cfg`)
 
-And that's all! Not anytime you press `MOUSE4`+E you can annoy your medic to give you uber XD
+And that's all! Now anytime you press `MOUSE4`+`E` you can annoy your medic to give you uber XD
 
 And for the last topic:
 ### Callbacks
@@ -187,7 +187,7 @@ It's rather hard for me to describe what a callback is, so I will base my explan
 
 Let's say you play spy, your `fov_desired` is `90` by default but you want it to switch to `75` for your ambassador. So you need to switch to `75` when choosing `slot1`, and back to `90` when choosing anything else. The problem starts with *anything else* part. Normally you would need to include `fov_desired 90` into slots 2 to 10 to set fov to normal, but with TF2-EasyScript you need to do it only once for `slot1` callback, `sc_slot1`.
 
-Assuming you are using default binds (`bind 1 +u_slot`,etc...)  
+Assuming you are using default binds (`bind 1 +u_slot1`,etc...)  
 We need to locate the default function for `+u_slot1`, which should be a combination of any of 4 script aliases. In this case it's 
 
         alias sa_slot1 "slot1"; (you can easily find this in easyscript.cfg)
