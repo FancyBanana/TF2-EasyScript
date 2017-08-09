@@ -4,65 +4,57 @@
 //////////////////////////////// ////////////////////////////////
 alias +fe_misc1 +se_misc1
 alias -fe_misc1 -se_misc1
-alias fa_misc1 sa_misc1
 alias +u_misc1 +fd_misc1
 alias -u_misc1 -fd_misc1
  
 alias +fe_misc2 +se_misc2
 alias -fe_misc2 -se_misc2
-alias fa_misc2 sa_misc2
 alias +u_misc2 +fd_misc2
 alias -u_misc2 -fd_misc2
  
 alias +fe_misc3 +se_misc3
 alias -fe_misc3 -se_misc3
-alias fa_misc3 sa_misc3
 alias +u_misc3 +fd_misc3
 alias -u_misc3 -fd_misc3
  
 alias +fe_misc4 +se_misc4
 alias -fe_misc4 -se_misc4
-alias fa_misc4 sa_misc4
 alias +u_misc4 +fd_misc4
 alias -u_misc4 -fd_misc4
  
 alias +fe_misc5 +se_misc5
 alias -fe_misc5 -se_misc5
-alias fa_misc5 sa_misc5
 alias +u_misc5 +fd_misc5
 alias -u_misc5 -fd_misc5
  
 alias +fe_misc6 +se_misc6
 alias -fe_misc6 -se_misc6
-alias fa_misc6 sa_misc6
 alias +u_misc6 +fd_misc6
 alias -u_misc6 -fd_misc6
  
 alias +fe_misc7 +se_misc7
 alias -fe_misc7 -se_misc7
-alias fa_misc7 sa_misc7
 alias +u_misc7 +fd_misc7
 alias -u_misc7 -fd_misc7
  
 alias +fe_misc8 +se_misc8
 alias -fe_misc8 -se_misc8
-alias fa_misc8 sa_misc8
 alias +u_misc8 +fd_misc8
 alias -u_misc8 -fd_misc8
  
-alias +fd_misc1 "+fe_misc1; fa_misc1; "
+alias +fd_misc1 "+fe_misc1; "
 alias -fd_misc1 "-fe_misc1; " 
-alias +fd_misc2 "+fe_misc2; fa_misc2; "
+alias +fd_misc2 "+fe_misc2; "
 alias -fd_misc2 "-fe_misc2; " 
-alias +fd_misc3 "+fe_misc3; fa_misc3; "
+alias +fd_misc3 "+fe_misc3; "
 alias -fd_misc3 "-fe_misc3; " 
-alias +fd_misc4 "+fe_misc4; fa_misc4; "
+alias +fd_misc4 "+fe_misc4; "
 alias -fd_misc4 "-fe_misc4; " 
-alias +fd_misc5 "+fe_misc5; fa_misc5; "
+alias +fd_misc5 "+fe_misc5; "
 alias -fd_misc5 "-fe_misc5; " 
-alias +fd_misc6 "+fe_misc6; fa_misc6; "
+alias +fd_misc6 "+fe_misc6; "
 alias -fd_misc6 "-fe_misc6; " 
-alias +fd_misc7 "+fe_misc7; fa_misc7; "
+alias +fd_misc7 "+fe_misc7; "
 alias -fd_misc7 "-fe_misc7; " 
-alias +fd_misc8 "+fe_misc8; fa_misc8; "
+alias +fd_misc8 "+fe_misc8; "
 alias -fd_misc8 "-fe_misc8; " 

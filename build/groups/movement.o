@@ -4,37 +4,33 @@
 //////////////////////////////// ////////////////////////////////
 alias +fe_forward +se_forward
 alias -fe_forward -se_forward
-alias fa_forward sa_forward
 alias fc_forward sc_forward
 alias +u_forward +fd_forward
 alias -u_forward -fd_forward
  
 alias +fe_back +se_back
 alias -fe_back -se_back
-alias fa_back sa_back
 alias fc_back sc_back
 alias +u_back +fd_back
 alias -u_back -fd_back
  
 alias +fe_moveleft +se_moveleft
 alias -fe_moveleft -se_moveleft
-alias fa_moveleft sa_moveleft
 alias fc_moveleft sc_moveleft
 alias +u_moveleft +fd_moveleft
 alias -u_moveleft -fd_moveleft
  
 alias +fe_moveright +se_moveright
 alias -fe_moveright -se_moveright
-alias fa_moveright sa_moveright
 alias fc_moveright sc_moveright
 alias +u_moveright +fd_moveright
 alias -u_moveright -fd_moveright
  
-alias +fd_forward "gc_movement; alias gc_movement fc_forward; +fe_forward; fa_forward; "
+alias +fd_forward "gc_movement; alias gc_movement fc_forward; +fe_forward; "
 alias -fd_forward "-fe_forward; " 
-alias +fd_back "gc_movement; alias gc_movement fc_back; +fe_back; fa_back; "
+alias +fd_back "gc_movement; alias gc_movement fc_back; +fe_back; "
 alias -fd_back "-fe_back; " 
-alias +fd_moveleft "gc_movement; alias gc_movement fc_moveleft; +fe_moveleft; fa_moveleft; "
+alias +fd_moveleft "gc_movement; alias gc_movement fc_moveleft; +fe_moveleft; "
 alias -fd_moveleft "-fe_moveleft; " 
-alias +fd_moveright "gc_movement; alias gc_movement fc_moveright; +fe_moveright; fa_moveright; "
+alias +fd_moveright "gc_movement; alias gc_movement fc_moveright; +fe_moveright; "
 alias -fd_moveright "-fe_moveright; " 

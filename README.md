@@ -2,7 +2,9 @@
 A scripting framework by /u/FanciestBanana  
 A thank you for people contributing to this project: /u/Tvde1  
 
-### For quick programming guide scroll to the bottom.
+## Update 1.2 broke compatibility with previous version. Please read changelog. Older 1.1 version is still available. Sorry of inconvinience.
+
+#### For quick programming guide scroll to the bottom.
 
 ## Description
 
@@ -102,7 +104,6 @@ Here's a bit more detailed:
 
          sc_<function_name>  //callback alias(explained later)
         +se_<function_name>  //keydown event alias
-         sa_<function_name>  //key press event alias
         -se_<function_name>  //keyup event alias
 
    that are used to call alias in user scripts. Please notice that all these are the same aliases name with different prefixes.
@@ -129,8 +130,6 @@ and how it is executed:
 
                            3. +se_attack called (+attack)
 
-                           4. sa_attack  called (nothing)
-
         releasing MOUSE1-> 1. -se_attack called (-attack)
 
 Comment: attack key group has callback functionality, that's why you can define `sc_attack`, `sc_attack2` and `sc_attack3` to be called for consecutive key presses.
@@ -140,14 +139,13 @@ another example
 
 what you write
 
-        bind E +u_callmed
-        alias sa_callmed v_medic (v_medic is one of many 
+        bind  E +u_callmed
+        alias +se_callmed v_medic (v_medic is one of many 
                                   short-hand aliases in TF2-EasyScript)
 
 and what happens when you press key
 
-        pressing  E-> 1. +se_callmed (nothing)
-                      2. sa_callmed (v_medic)
+        pressing  E-> 1. +se_callmed (v_medic)
 
         releasing E-> 1. -se_callmed (nothing)
 
@@ -156,7 +154,7 @@ Pretty simple, right? How about something more complex:
 
 Here we will be using predefined `pa` (full name is `mod_pa`) modifier.  
 There are 2 types of modifiers: `press` and `toggle`.  
-`a` is a `press` modifier (**p**a), first by alphabetical order (**a**). There are a total of 4 predefined modifiers:  
+`a` is a `press` modifier (**p**a), first by alphabetical order (p**a**). There are a total of 4 predefined modifiers:  
  * (`mod_`)`pa`
  * (`mod_`)`pb`
  * (`mod_`)`ta`
@@ -164,7 +162,7 @@ There are 2 types of modifiers: `press` and `toggle`.
 
  when any modifier is active, every script alias "gains a suffix", that corresponds to modifier name ex:
 
-        sa_callmed becomes sa_callmed_pa
+        +se_callmed becomes +se_callmed_pa
 
 you can add more (why would you need more?) by modifying source files and building the framework from source.
 
@@ -172,7 +170,7 @@ assuming the last example we need to write
 
         bind `MOUSE4` +u_mod_pa  //binding shift mode alias 
 
-        alias sa_callmed_pa v_activateuber 
+        alias +se_callmed_pa v_activateuber 
 
                         (again, this handy short-hand alias
                         for a voice command can be found in
@@ -190,7 +188,7 @@ Let's say you play spy, your `fov_desired` is `90` by default but you want it to
 Assuming you are using default binds (`bind 1 +u_slot1`,etc...)  
 We need to locate the default function for `+u_slot1`, which should be a combination of any of 4 script aliases. In this case it's 
 
-        alias sa_slot1 "slot1"; (you can easily find this in easyscript.cfg)
+        alias +se_slot1 "slot1"; (you can easily find this in easyscript.cfg)
 
 We will override this to include desired functionality.
 
@@ -200,7 +198,7 @@ Inside we write:
 
         exec easyscript.cfg //obligatory, will reset aliases and cleanup
 
-        alias sa_slot1 "slot1; fov_desired 75" //now selecting slot1 will set your fov to 75
+        alias +se_slot1 "slot1; fov_desired 75" //now selecting slot1 will set your fov to 75
 
         alias sc_slot1 "fov_desired 90;"  //this will reset fov to normal when deselecting slot1
 
@@ -215,9 +213,7 @@ So now we will examine what happens when we press `2` then `1` then `3`:
                         2. setting gc_slot to sc_slot2 
                            (default: "none")
 
-                        3. +se_slot2('none')
-
-                        4. sa_slot2 ("slot2")
+                        3. +se_slot2 ("slot2")
 
         releasing 2 ->  1. -se_slot2 ("none")
                         
@@ -226,9 +222,7 @@ So now we will examine what happens when we press `2` then `1` then `3`:
                         2. setting gc_slot to sc_slot1
                            (we defined sc_slot1: "fov_desired 90")
 
-                        3. +se_slot1("none")
-
-                        4. sa_slot1 ("slot1; fov_desired 75;")
+                        3. +se_slot1 ("slot1; fov_desired 75;")
                         
         releasing 1 ->  1. -se_slot1 ("none")
 
@@ -239,8 +233,6 @@ So now we will examine what happens when we press `2` then `1` then `3`:
                         2. setting gc_slot to sc_slot3 ("none")
 
                         3. +se_slot3("none")
-
-                        4. sa_slot3 ("none")
 
         releasing 3 ->  1. -se_slot3("none")
 

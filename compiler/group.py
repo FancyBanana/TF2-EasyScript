@@ -69,7 +69,6 @@ def compileGroup(group_name, group_data, options):
             # aliases used by scripters
             'pse':    '+se_'+entry['name'],
             'mse':    '-se_'+entry['name'],
-            'sa':     'sa_'+entry['name'],
             'sc':     'sc_'+entry['name'],
             # Framework internal aliases
             # these mirror user's end, they are used for qswitch
@@ -78,7 +77,6 @@ def compileGroup(group_name, group_data, options):
             # these aliases mirror scripters end, used for modifiers
             'pfe':    '+fe_'+entry['name'],
             'mfe':    '-fe_'+entry['name'],
-            'fa':     'fa_'+entry['name'],
             'fc':     'fc_'+entry['name'],
             # this one holds the callback pointer for this entry
             'fp':     'fp_'+entry['name'],
@@ -90,7 +88,6 @@ def compileGroup(group_name, group_data, options):
         if options['modifiers']:
             modifiables += [[pre['pfe'], pre['pse']]]
             modifiables += [[pre['mfe'], pre['mse']]]
-            modifiables += [[pre['fa'],  pre['sa']]]
             if options['callback'] and not is_qswitch_element:
                 modifiables += [[pre['fc'], pre['sc']]]
 
@@ -110,15 +107,12 @@ def compileGroup(group_name, group_data, options):
         if not entry['funct']:
             resets += ['alias ' + pre['pse'] + ' none;']
             resets += ['alias ' + pre['mse'] + ' none;']
-            resets += ['alias ' + pre['sa'] + ' none;']
         elif re.match(r"\+.+", entry['funct']):
             def_funct += ['alias ' + pre['pse'] + ' "' + entry['funct'] + '";']
             def_funct += ['alias ' + pre['mse'] + ' "' +
                           mAlias(entry['funct']) + '";']
-            resets += ['alias ' + pre['sa'] + ' none;']
         else:
-            def_funct += ['alias ' + pre['sa'] + ' "' + entry['funct'] + '";']
-            resets += ['alias ' + pre['pse'] + ' none;']
+            def_funct += ['alias ' + pre['pse'] + ' "' + entry['funct'] + '";']
             resets += ['alias ' + pre['mse'] + ' none;']
 
         # setting default binds
@@ -153,7 +147,6 @@ def compileGroup(group_name, group_data, options):
         # defaul script aliases for framework vars
         header += ['alias ' + pre['pfe'] + ' ' + pre['pse']]
         header += ['alias ' + pre['mfe'] + ' ' + pre['mse']]
-        header += ['alias ' + pre['fa'] + ' ' + pre['sa']]
         if options['callback']:
             header += ['alias ' + pre['fc'] + ' ' + pre['sc']]
         header += ['alias ' + pre['pu'] + ' ' + pre['pfd']]
@@ -179,7 +172,7 @@ def compileGroup(group_name, group_data, options):
         if options['qswitch'] and not is_qswitch_element:
             palias += gpre['gl'] + '; alias ' + \
              gpre['gl'] + ' ' + pre['fl'] + '; '
-        palias += pre['pfe'] + '; ' + pre['fa'] + '; '
+        palias += pre['pfe'] + '; '
         if(entry['secondary']):
             palias += entry['secondary'] + ''
         palias += '"'
