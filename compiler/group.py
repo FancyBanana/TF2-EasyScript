@@ -82,6 +82,8 @@ def compileGroup(group_name, group_data, options):
             'fp':     'fp_'+entry['name'],
             # this is lastinv function for this entry
             'fl':     'fl_'+entry['name'],
+            # alias to setup lastinv
+            'gl':     'gl_'+entry['name'],
         }
 
         # export everything that is affected by modifiers in separate array
@@ -135,9 +137,15 @@ def compileGroup(group_name, group_data, options):
 
         # a function to setup quickswitch
         if options['qswitch'] and not is_qswitch_element:
-            fl_funct = 'alias ' + pre['fl'] + ' "'\
+            # setting up lastinv after buton press
+
+            gl_funct = 'alias ' + pre['gl'] + ' "'\
                 + ' alias ' + gpre['pgl'] + ' ' + pre['pfd'] + '; ' \
-                + ' alias ' + gpre['mgl'] + ' ' + pre['mfd'] + '; ' \
+                + ' alias ' + gpre['mgl'] + ' ' + pre['mfd'] + ';"'
+            init2 += [gl_funct]
+
+            fl_funct = 'alias ' + pre['fl'] + ' "'\
+                + ' alias ' + gpre['gl'] + ' ' + pre['gl'] + '; '\
                 + ' alias ' + gpre['pgn'] + ' ' + lpre['pin'] + '; ' \
                 + ' alias ' + gpre['mgn'] + ' ' + lpre['min'] + '; ' \
                 + ' alias ' + gpre['pgp'] + ' ' + lpre['pip'] + '; ' \
@@ -170,8 +178,7 @@ def compileGroup(group_name, group_data, options):
         if options['callback'] and not is_qswitch_element:
             palias += 'alias ' + gpre['gc'] + ' ' + pre['fc'] + '; '
         if options['qswitch'] and not is_qswitch_element:
-            palias += gpre['gl'] + '; alias ' + \
-             gpre['gl'] + ' ' + pre['fl'] + '; '
+            palias += gpre['gl'] + '; ' + pre['fl'] + '; '
         palias += pre['pfe'] + '; '
         if(entry['secondary']):
             palias += entry['secondary'] + ''
