@@ -2,7 +2,7 @@
 A scripting framework by /u/FanciestBanana  
 A thank you for people contributing to this project: /u/Tvde1  
 
-## Update 1.2 broke compatibility with previous version. Please read changelog. Older 1.1 version is still available. Sorry of inconvinience.
+## Update 1.2 broke compatibility with previous version. Please read changelog. Older 1.1 version is still available. Sorry of inconvenience.
 
 #### For quick programming guide scroll to the bottom.
 
@@ -236,6 +236,6 @@ So now we will examine what happens when we press `2` then `1` then `3`:
 
         releasing 3 ->  1. -se_slot3("none")
 
-Comment: When using mode shifting, the same callback alias `gc_<group_name>` will be used across mode shift, meaning that switching from `slot1_pa` to `slot1` will call `sc_slot1_pa`. This behaviour maybe subject to change. If you have a request, feel free to write me.
+Comment: When using mode shifting, the same callback alias `gc_<group_name>` will be used across mode shift, meaning that switching from `slot1_pa` to `slot1` will call `sc_slot1_pa`. This behavior maybe subject to change. If you have a request, feel free to write me.
 
 So now you have basic understanding of how to work with TF2-EasyScript, what now? Now you play, write scripts, download scripts and just enjoy your new controls. Invert medigun attack function, make quickbuild script for engineer or randomized disguise for spy. You have all the freedom and one of the most powerful api and your disposal. Go nuts!
