@@ -53,6 +53,10 @@ bind f6 +u_save_replay
 bind f7 +u_abuse_report
 bind f10 +u_quit_game
 bind f12 +u_replay_tips
+bind ESCAPE +u_cancelselect
+bind j +u_askconnect_accept
+bind y +u_say
+bind u +u_say_team
  
 bind 1 +u_slot1
 bind 2 +u_slot2

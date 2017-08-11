@@ -51,6 +51,10 @@ alias +se_save_replay "save_replay";
 alias +se_abuse_report "abuse_report_queue";
 alias +se_quit_game "quit prompt";
 alias +se_replay_tips "replay_togglereplaytips";
+alias +se_cancelselect "cancelselect";
+alias +se_askconnect_accept "askconnect_accept";
+alias +se_say "say";
+alias +se_say_team "say_team";
  
 alias +se_slot1 "slot1";
 alias +se_slot2 "slot2";

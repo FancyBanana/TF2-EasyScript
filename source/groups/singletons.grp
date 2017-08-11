@@ -25,3 +25,7 @@ save_replay             :   save_replay                 :   f6
 abuse_report            :   abuse_report_queue          :   f7
 quit_game               :   quit prompt                 :   f10
 replay_tips             :   replay_togglereplaytips     :   f12
+cancelselect            :   cancelselect                :   ESCAPE
+askconnect_accept       :   askconnect_accept           :   j
+say                     :   say                         :   y
+say_team                :   say_team                    :   u
