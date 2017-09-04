@@ -55,10 +55,10 @@ alias +se_cancelselect "cancelselect";
 alias +se_askconnect_accept "askconnect_accept";
 alias +se_say "say";
 alias +se_say_team "say_team";
-alias +se_loadout_1 "load_itempreset 1";
-alias +se_loadout_2 "load_itempreset 2";
+alias +se_loadout_1 "load_itempreset 0";
+alias +se_loadout_2 "load_itempreset 1";
+alias +se_loadout_3 "load_itempreset 2";
 alias +se_loadout_3 "load_itempreset 3";
-alias +se_loadout_3 "load_itempreset 4";
  
 alias +se_slot1 "slot1";
 alias +se_slot2 "slot2";
