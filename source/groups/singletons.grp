@@ -27,8 +27,6 @@ quit_game               :   quit prompt                 :   f10
 replay_tips             :   replay_togglereplaytips     :   f12
 cancelselect            :   cancelselect                :   ESCAPE
 askconnect_accept       :   askconnect_accept           :   j
-say                     :   say                         :   y
-say_team                :   say_team                    :   u
 loadout_0               :   load_itempreset 0
 loadout_1               :   load_itempreset 1
 loadout_2               :   load_itempreset 2

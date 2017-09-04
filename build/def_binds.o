@@ -55,8 +55,6 @@ bind f10 +u_quit_game
 bind f12 +u_replay_tips
 bind ESCAPE +u_cancelselect
 bind j +u_askconnect_accept
-bind y +u_say
-bind u +u_say_team
 //bind <key> +u_loadout_0
 //bind <key> +u_loadout_1
 //bind <key> +u_loadout_2
