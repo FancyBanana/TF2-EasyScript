@@ -29,3 +29,7 @@ cancelselect            :   cancelselect                :   ESCAPE
 askconnect_accept       :   askconnect_accept           :   j
 say                     :   say                         :   y
 say_team                :   say_team                    :   u
+loadout_1               :   load_itempreset 1
+loadout_2               :   load_itempreset 2
+loadout_3               :   load_itempreset 3
+loadout_3               :   load_itempreset 4
