@@ -96,3 +96,8 @@ def readModifiers(lines):
             continue
         res.append({'name': prepped[0], 'type': prepped[1]})
     return res
+
+
+def writeListToFile(list, file):
+    for line in list:
+        file.write(line+"\n")

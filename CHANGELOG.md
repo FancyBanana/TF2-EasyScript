@@ -23,6 +23,10 @@
 
  * Bugfix: Fixed funky behavior when using invlast, invnext and invprev.
 
- ## 1.2.2
+## 1.2.2
 
   * Bugfix: Added fix to `show on screen` script, setting `con_filter_text_out` to `0` by default.
+
+## 1.3
+
+  * Added mod_<modifier_name>_set and  mod_<modifier_name>_reset. These are activated when a modifier is activated(set)  and deactivated(reset).

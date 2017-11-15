@@ -1,65 +1,64 @@
 #! python3
 
-from glob import glob
-from os import makedirs
+# If you want to modify complation process,
+# then go to compiler/config.py
+# This file 
 
-# get the configuration
-from compiler.cfg import *
+from glob import glob
+from os import makedirs, path
+
 # get functions
 from compiler.group import *
 from compiler.modifiers import *
 from compiler.text import *
 
+# get configuration
+from compiler.config import CFG
+
 # this will hold the list of all modifiable aliases
 modifiables = []
 
 # creating relevant dirs
-try:
-    makedirs(CFG.build+'groups/')
+
+if(not path.isdir(CFG.out_dir)):
     makedirs(CFG.out_dir)
-except Exception:
-    pass
+if(not path.isdir(CFG.temp)):
+    makedirs(CFG.temp)
 # file containing modifiers' definition
-m = open(CFG.modifiers, 'r')
+m = open(CFG.source_modifiers, 'r')
 
 # relevant output files where text is saved before stitching
-frs = open(CFG.build+'reset.o', 'w+')
-fdb = open(CFG.build+'def_binds.o', 'w+')
-fdf = open(CFG.build+'def_funct.o', 'w+')
-fmd = open(CFG.build+'modifiers.o', 'w+')
+frs = open(CFG.temp + 'reset.o', 'w+')
+fdb = open(CFG.temp + 'def_binds.o', 'w+')
+fdf = open(CFG.temp + 'def_funct.o', 'w+')
+fmd = open(CFG.temp + 'modifiers.o', 'w+')
 
-# read every group, it's options and compile itew
-groups = glob(CFG.groups+'*.grp')
+# read every group, it's options and compile items
+groups = glob(CFG.source_groups + '*.grp')
+fo = open(CFG.temp + 'groups.o', 'w')
 for gpr in groups:
-    f = justName(gpr)
+    f = baseNameNoExt(gpr)
     f1 = open(gpr, 'r')
-    f2 = open(CFG.groups+f+'.opt', 'r')
-    fo = open(CFG.build+'groups/'+f+'.o', 'w')
+    f2 = open(CFG.source_groups + f + '.opt', 'r')
     res = compileGroup(f, readGroup(f1.readlines()),
                        readOptions(f2.readlines()))
-    for line in res['text']:
-        fo.write(line+"\n")
-    for line in res['resets']:
-        frs.write(line+"\n")
-    for line in res['def_binds']:
-        fdb.write(line+"\n")
-    for line in res['def_funct']:
-        fdf.write(line+"\n")
+    writeListToFile(res['text'], fo)
+    writeListToFile(res['resets'], frs)
+    writeListToFile(res['def_binds'], fdb)
+    writeListToFile(res['def_funct'], fdf)
     modifiables += res['modifiables']
     f1.close()
     f2.close()
-    fo.close()
+    fo.write("\n")
+fo.close()
 
 
 # compile modifiers
 res = None
 res = compileModifiers(readModifiers(m.readlines()), modifiables)
-for line in res['text']:
-    fmd.write(line+"\n")
-for line in res['resets']:
-    frs.write(line+"\n")
-for line in res['def_binds']:
-    fdb.write(line+"\n")
+writeListToFile(res['text'], fmd)
+writeListToFile(res['resets'], frs)
+writeListToFile(res['def_binds'], fdb)
 
 # closing file since it is useless now
 m.close()
@@ -69,40 +68,7 @@ fdb.close()
 fdf.close()
 fmd.close()
 
-# stitch output files toghether with some prefabs
-# create the stitch list
-l_framework = [
-    CFG.prefabs+'title.pre',
-    CFG.prefabs+'def_binds.pre',
-    CFG.build+'def_binds.o',
-    CFG.prefabs+'def_funct.pre',
-    CFG.build+'def_funct.o',
-    CFG.prefabs+'execs.pre',
-]
-l_resets = [
-    CFG.prefabs+'reset.pre',
-    CFG.build+'reset.o',
-    CFG.prefabs+'unstick.pre',
-]
-l_groups = [CFG.prefabs+'groups.pre']
-l_groups += glob(CFG.build+'groups/*')
-l_groups += [CFG.prefabs+'built_ins.pre']
-
-l_modifiers = [
-    CFG.build+'modifiers.o',
-]
-
-
-# build easyscript.cfg
-stitchFiles(l_framework, CFG.oFramework)
-
-# build resets
-stitchFiles(l_resets, CFG.oResets)
-
-# build groups
-stitchFiles(l_groups, CFG.oGroups)
-
-# build modifiers
-stitchFiles(l_modifiers, CFG.oModifiers)
+for (l, d) in CFG.stitching_map:
+    stitchFiles(l, d)
 
 print('End of compilation')

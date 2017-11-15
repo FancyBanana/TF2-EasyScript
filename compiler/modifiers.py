@@ -13,16 +13,20 @@ def compileModifiers(modifiers, modifiables):
     def_binds = []
 
     text += [' ']
-    text += ['////////////////////////////////////////////////////////////////']
+    text += ['/////////////////////////////////////////////\
+              ///////////////////']
     text += ['///// Modifiers']
-    text += ['////////////////////////////////////////////////////////////////']
+    text += ['/////////////////////////////////////////////\
+              ///////////////////']
     text += [' ']
+    text += ['alias mod_reset none;']
 
     # since resetting aliases to previous values
     # is common operation for all modifiers
     # it makes sense to define it only once
     al_index = 0
-    fm_reset = 'alias fm_reset "'
+    fm_reset = "mod_reset; "
+    fm_reset += "alias fm_reset "
     for index, entry in enumerate(modifiables):
         if (index % link_len) != 0:
             fm_reset += 'alias ' + entry[0] + ' ' + entry[1] + '; '
@@ -53,6 +57,8 @@ def compileModifiers(modifiers, modifiables):
             'ft': "ft_mod_"+modifier_name,
             'pft': "+ft_mod_"+modifier_name,
             'mft': "-ft_mod_"+modifier_name,
+            'set': "mod_"+modifier_name+"_set",
+            'reset': "mod_"+modifier_name+"_reset",
         }
         # resetting/setting values of script aliases
         resets += ['alias ' + pre['sa'] + ' none; ']
@@ -76,7 +82,10 @@ def compileModifiers(modifiers, modifiables):
             text += ['alias %s none; ' % pre['mu']]
 
         fm = 'alias %s "' % pre['fm']
+        fm += '%s; ' % pre['set']
+        fm += 'alias mod_reset %s; ' % pre['reset']
         al_index = 0
+
         for index, entry in enumerate(modifiables):
             if index % link_len != 0:
                 fm += 'alias %s %s_%s; ' % (entry[0], entry[1], modifier_name)
@@ -84,9 +93,11 @@ def compileModifiers(modifiers, modifiables):
                 fm += ' %s%s;"\nalias %s%s "' % (pre['fm'], al_index,
                                                  pre['fm'], al_index)
                 al_index += 1
-            resets += ['alias %s_%s %s; ' % (entry[1], modifier_name, entry[1])]
+            resets += ['alias %s_%s %s; ' %
+                       (entry[1], modifier_name, entry[1])]
+
         fm += ' "'
         text += [fm] + [' ']
-    
+
     def_binds += [' ']
     return {'text': text, 'resets': resets, 'def_binds': def_binds}

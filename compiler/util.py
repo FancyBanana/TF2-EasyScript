@@ -18,5 +18,5 @@ def arraySubst(src, dest):
     return dest
 
 
-def justName(filename):
+def baseNameNoExt(filename):
     return splitext(basename(filename))[0]

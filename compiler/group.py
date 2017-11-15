@@ -1,6 +1,6 @@
 #! python3
 
-from compiler.cfg import *
+from compiler.config import *
 from compiler.util import *
 from compiler.text import *
 import re
