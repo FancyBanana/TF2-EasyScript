@@ -1,6 +1,6 @@
 *.o
 *.pyc
 temp
-__pycache__
+**/__pycache__
 wiki
 *.zip
