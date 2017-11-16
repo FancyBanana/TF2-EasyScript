@@ -1,12 +1,11 @@
 #! python3
 
-from compiler.config import *
 from compiler.util import *
 from compiler.text import *
 import re
 
 
-def compileGroup(group_name, group_data, options):
+def compileGroup(group_name, group_data, options, preventCallbackSpam):
     is_first = True         # first loop is special
     invnext_entry = None    # initialze invprev and invnext
     invprev_entry = None
@@ -29,14 +28,14 @@ def compileGroup(group_name, group_data, options):
     modifiables = []
     # resetting some group aliases
     gpre = {
-        'gc':     'gc_'+group_name,
-        'gl':     'gl_'+group_name,
-        'pgl':    '+gl_'+group_name,
-        'mgl':    '-gl_'+group_name,
-        'pgn':    '+gn_'+group_name,
-        'mgn':    '-gn_'+group_name,
-        'pgp':    '+gp_'+group_name,
-        'mgp':    '-gp_'+group_name,
+        'gc':     'gc_' + group_name,
+        'gl':     'gl_' + group_name,
+        'pgl':    '+gl_' + group_name,
+        'mgl':    '-gl_' + group_name,
+        'pgn':    '+gn_' + group_name,
+        'mgn':    '-gn_' + group_name,
+        'pgp':    '+gp_' + group_name,
+        'mgp':    '-gp_' + group_name,
     }
 
     if options['qswitch']:
@@ -64,26 +63,26 @@ def compileGroup(group_name, group_data, options):
         # precompile all prefixes for ease of use
         pre = {
             # aliases that user binds
-            'pu':     '+u_'+entry['name'],
-            'mu':     '-u_'+entry['name'],
+            'pu':     '+u_' + entry['name'],
+            'mu':     '-u_' + entry['name'],
             # aliases used by scripters
-            'pse':    '+se_'+entry['name'],
-            'mse':    '-se_'+entry['name'],
-            'sc':     'sc_'+entry['name'],
+            'pse':    '+se_' + entry['name'],
+            'mse':    '-se_' + entry['name'],
+            'sc':     'sc_' + entry['name'],
             # Framework internal aliases
             # these mirror user's end, they are used for qswitch
-            'pfd':    '+fd_'+entry['name'],
-            'mfd':    '-fd_'+entry['name'],
+            'pfd':    '+fd_' + entry['name'],
+            'mfd':    '-fd_' + entry['name'],
             # these aliases mirror scripters end, used for modifiers
-            'pfe':    '+fe_'+entry['name'],
-            'mfe':    '-fe_'+entry['name'],
-            'fc':     'fc_'+entry['name'],
+            'pfe':    '+fe_' + entry['name'],
+            'mfe':    '-fe_' + entry['name'],
+            'fc':     'fc_' + entry['name'],
             # this one holds the callback pointer for this entry
-            'fp':     'fp_'+entry['name'],
+            'fp':     'fp_' + entry['name'],
             # this is lastinv function for this entry
-            'fl':     'fl_'+entry['name'],
+            'fl':     'fl_' + entry['name'],
             # alias to setup lastinv
-            'gl':     'gl_'+entry['name'],
+            'gl':     'gl_' + entry['name'],
         }
 
         # export everything that is affected by modifiers in separate array
@@ -97,10 +96,10 @@ def compileGroup(group_name, group_data, options):
         lpre = {}
         if options['qswitch'] and not is_qswitch_element:
             lpre = {
-                    'pin': '+fd_'+entry['next'] if entry['next'] else ' ',
-                    'min': '-fd_'+entry['next'] if entry['next'] else ' ',
-                    'pip': '+fd_'+entry['prev'] if entry['next'] else ' ',
-                    'mip': '-fd_'+entry['prev'] if entry['next'] else ' ', }
+                'pin': '+fd_' + entry['next'] if entry['next'] else ' ',
+                'min': '-fd_' + entry['next'] if entry['next'] else ' ',
+                'pip': '+fd_' + entry['prev'] if entry['next'] else ' ',
+                'mip': '-fd_' + entry['prev'] if entry['next'] else ' ', }
         # creating resets and default binds
         if options['callback']:
             resets += ['alias ' + pre['sc'] + ' none;']
@@ -163,11 +162,11 @@ def compileGroup(group_name, group_data, options):
 
         # Default button press alias
         palias = 'alias ' + pre['pfd'] + ' "'
-        if CFG.preventCallbackSpam:
+        if preventCallbackSpam:
             palias += "alias %s none; " % pre['fc']
         if options['callback'] and not is_qswitch_element:
             palias += gpre['gc'] + '; '
-        if CFG.preventCallbackSpam:
+        if preventCallbackSpam:
             palias += "alias %s %s; " % (pre['fc'], pre['sc'])
         if options['lastinv'] == entry['name']:
             palias += gpre['pgl'] + '; '
