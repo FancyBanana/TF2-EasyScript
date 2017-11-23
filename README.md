@@ -34,8 +34,7 @@ a base for sharing scripts. It serves as a middleman between user input and scri
 
 ## How to install:  
 1. Go to:  
-     * [Releases](https://github.com/FancyBanana/TF2-EasyScript/releases) page on `GitHub`  
-     * [Tags](https://gitlab.com/vharabar/TF2-EasyScript/tags) page on `GitLab`  
+     * [Releases](https://github.com/FancyBanana/TF2-EasyScript/releases) page on `GitHub`
 and grab a `.zip` with latest release of TF2-EasyScript
 
 1. Navigate to your TF2 cfg folder.  
