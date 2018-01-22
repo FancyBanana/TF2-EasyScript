@@ -30,3 +30,7 @@
 ## 1.3
 
   * Added mod_<modifier_name>_set and  mod_<modifier_name>_reset. These are activated when a modifier is activated(set)  and deactivated(reset).
+
+## 1.3.1
+
+ * Quickfix missing resets for mod_<>_set
