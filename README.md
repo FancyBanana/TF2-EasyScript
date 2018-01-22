@@ -17,7 +17,7 @@ a base for sharing scripts. It serves as a middleman between user input and scri
    Every single key press can be and should be treated by EasyScript.
 
  * ### Change key binds without changing your script!
-   
+
  * ### Mode shift everything!
    Mode shifting for ***every single*** (you heard it) ___key in the game___.  
 

@@ -64,6 +64,8 @@ def compileModifiers(modifiers, modifiables):
         resets += ['alias ' + pre['sa'] + ' none; ']
         resets += ['alias ' + pre['pse'] + ' none; ']
         resets += ['alias ' + pre['mse'] + ' none; ']
+        resets += ['alias ' + pre['set'] + ' none; ']
+        resets += ['alias ' + pre['reset'] + ' none; ']
 
         # default' binds for modifier keys
         def_binds += ['//bind <key> ' + pre['pu']]
