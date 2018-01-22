@@ -1,7 +1,7 @@
 #! python3
 
 # If you want to modify complation process,
-# then go to compiler/config.py
+# then go to ../config.py
 # This file
 
 from glob import glob
