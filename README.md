@@ -37,12 +37,13 @@ a base for sharing scripts. It serves as a middleman between user input and scri
      * [Releases](https://github.com/FancyBanana/TF2-EasyScript/releases) page on `GitHub`
 and grab a `.zip` with latest release of TF2-EasyScript
 
-1. Navigate to your TF2 cfg folder.  
-    -  Example: `C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\cfg`
+1. Navigate to your TF2 custom folder.  
+    -  Example: `C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\custom`
 
-1. Copy the contents of the archive into TF2 cfg folder  
+1. Create a folder with a name of your choosing (someting like `myscripts`), and a folder named `cfg` inside it.
+    - final result should look something like that: `<tf2_folder>\custom\myscripts\cfg`
 
-1. If you hadn't already, create `autoexec.cfg`. This file will be executed  
+1. If you hadn't already, create `autoexec.cfg` in that folder. This file will be executed  
         at every launch.  
 
 1. In `autoexec.cfg` write on first line `exec easyscript.cfg`    
