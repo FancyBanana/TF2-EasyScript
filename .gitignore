@@ -4,3 +4,4 @@ temp
 **/__pycache__
 wiki
 *.zip
+.mypy_cache/

@@ -47,7 +47,6 @@ def compileModifiers(modifiers, modifiables):
             # alias that contains modifier commands
             'fm': "fm_mod_"+modifier_name,
             # script facing aliases for button presses
-            'sa': "sa_mod_"+modifier_name,
             'pse': "+se_mod_"+modifier_name,
             'mse': "-se_mod_"+modifier_name,
             # aliases for user binds
@@ -61,7 +60,6 @@ def compileModifiers(modifiers, modifiables):
             'reset': "mod_"+modifier_name+"_reset",
         }
         # resetting/setting values of script aliases
-        resets += ['alias ' + pre['sa'] + ' none; ']
         resets += ['alias ' + pre['pse'] + ' none; ']
         resets += ['alias ' + pre['mse'] + ' none; ']
         resets += ['alias ' + pre['set'] + ' none; ']
@@ -71,8 +69,8 @@ def compileModifiers(modifiers, modifiables):
         def_binds += ['//bind <key> ' + pre['pu']]
         # some logic for press/toggle type of modifiers
         if modifier_type == "press":
-            text += ['alias %s "%s; %s; %s;" ' %
-                     (pre['pu'], pre['fm'], pre['pse'], pre['sa'])]
+            text += ['alias %s "%s; %s;"' %
+                     (pre['pu'], pre['fm'], pre['pse'])]
             text += ['alias %s "fm_reset; %s;"' % (pre['mu'], pre['mse'])]
         elif modifier_type == "toggle":
             text += ['alias %s %s; ' % (pre['ft'], pre['pft'])]
