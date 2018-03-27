@@ -57,7 +57,8 @@ and grab a `.zip` with latest release of TF2-EasyScript
 
 ## How to use
 
-##### For in-depth explanation on how to use TF2-EasyScript, please see `Wiki` section. (Coming soon)
+##### For in-depth explanation on how to use TF2-EasyScript, please see `Wiki` section. (Coming ~~never~~ soon)  
+##### Meanwhile you can check out [some of my snippets](https://github.com/FancyBanana/TF2-EasyScript-Snippets)
 
 #### Vocabulary
         function - a native command that when written in console executes some action

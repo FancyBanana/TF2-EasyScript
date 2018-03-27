@@ -34,3 +34,7 @@
 ## 1.3.1
 
  * Quickfix missing resets for mod_<>_set
+
+## 1.3.2  
+
+ * Removed `sa_` alias from modifier definition.
