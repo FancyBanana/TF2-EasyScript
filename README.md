@@ -2,8 +2,6 @@
 A scripting framework by /u/FanciestBanana  
 A thank you for people contributing to this project: /u/Tvde1  
 
-## Update 1.2 broke compatibility with previous version. Please read changelog. Older 1.1 version is still available. Sorry of inconvenience.
-
 #### For quick programming guide scroll to the bottom.
 
 ## Description
