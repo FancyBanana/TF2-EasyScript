@@ -71,7 +71,7 @@ It also should be noted that when a function or an alias with `+` prefix is boun
         pressing w down -> +forward is called
         releasing w     -> -forward is called
 
-TF2-EasyScript consists of 4 files, but everything useful in conveniently located in `easyscript.cfg`, other 3 are purely technical.  
+TF2-EasyScript consists of 4 files, but everything useful is conveniently located in `easyscript.cfg`, other 3 are purely technical.  
 
 `easyscript.cfg` contains all key bindings, active and stubs for unused ones, and also aliases for voice commands, building stuff, destroying stuff, using eurika teleport, joining a class, joining a team, disguise for every combination of team/class, and lastly default functions for framework aliases that mirror buttons and shift modifiers.  
 There's also a nifty script for showing console text on top of your HUD.
@@ -185,7 +185,7 @@ It's rather hard for me to describe what a callback is, so I will base my explan
 Let's say you play spy, your `fov_desired` is `90` by default but you want it to switch to `75` for your ambassador. So you need to switch to `75` when choosing `slot1`, and back to `90` when choosing anything else. The problem starts with *anything else* part. Normally you would need to include `fov_desired 90` into slots 2 to 10 to set fov to normal, but with TF2-EasyScript you need to do it only once for `slot1` callback, `sc_slot1`.
 
 Assuming you are using default binds (`bind 1 +u_slot1`,etc...)  
-We need to locate the default function for `+u_slot1`, which should be a combination of any of 4 script aliases. In this case it's 
+We need to locate the default function for `+u_slot1`, which should be a combination of any of 3 script aliases. In this case it's 
 
         alias +se_slot1 "slot1"; (you can easily find this in easyscript.cfg)
 
